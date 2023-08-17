@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="QEA Test Automation Suite">
+<listeners>
+	<listener class-name="com.testautomationuniversity.utilities.TestListener"></listener>
+</listeners>
+  <test thread-count="5" name="End2End Testcases">
+    <classes>
+      <class name="com.poc.SecondScript"/>
+      <class name="com.testautomationuniversity.testcases.CanNavigateToWebsite"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

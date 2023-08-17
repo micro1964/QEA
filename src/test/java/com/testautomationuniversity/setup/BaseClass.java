@@ -10,6 +10,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -21,16 +23,20 @@ public class BaseClass {
 	public static final int SCRIPT_TIMEOUT = 10;
 	public static final int PAGE_LOAD_TIMEOUT = 30;
 	
+	Logger logger = LoggerFactory.getLogger(BaseClass.class);
+	
 	public BaseClass() {
 		prop = new Properties();
 		String fs = System.getProperty("file.separator");
-		String configFile = System.getProperty("user.dir")+fs+"src"+fs+"test"+fs+"java"+fs+"com"+fs+"testautomationuniversity"+fs+"configuration"+fs+"config.properties";
+		//String configFile = System.getProperty("user.dir")+fs+"src"+fs+"test"+fs+"java"+fs+"com"+fs+"testautomationuniversity"+fs+"configuration"+fs+"config.properties";
+		String configFile = System.getProperty("user.dir")+fs+"src"+fs+"test"+fs+"resources"+fs+"config.properties";
 		File file = new File(configFile);
 		
 		try {
 			FileInputStream fis = new FileInputStream(file);
 			prop.load(fis);
-		} catch (IOException e) {
+			logger.info("The configuration properties file is located in: "+configFile);
+			} catch (IOException e) {
 			System.out.println(e.getMessage());
 			}
 		}
