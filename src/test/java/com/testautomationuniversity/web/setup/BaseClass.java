@@ -1,4 +1,4 @@
-package com.testautomationuniversity.setup;
+package com.testautomationuniversity.web.setup;
 
 import java.io.File;
 import java.io.FileInputStream;

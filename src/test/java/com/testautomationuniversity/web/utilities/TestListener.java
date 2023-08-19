@@ -1,4 +1,4 @@
-package com.testautomationuniversity.utilities;
+package com.testautomationuniversity.web.utilities;
 
 import org.testng.ITestContext;
 import org.testng.ITestListener;

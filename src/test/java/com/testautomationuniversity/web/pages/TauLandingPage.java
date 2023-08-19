@@ -1,4 +1,4 @@
-package com.testautomationuniversity.pages;
+package com.testautomationuniversity.web.pages;
 
 import java.time.Duration;
 

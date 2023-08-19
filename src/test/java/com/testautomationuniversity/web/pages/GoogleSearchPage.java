@@ -1,4 +1,4 @@
-package com.testautomationuniversity.pages;
+package com.testautomationuniversity.web.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

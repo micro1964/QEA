@@ -1,4 +1,4 @@
-package com.testautomationuniversity.testcases;
+package com.testautomationuniversity.web.testcases;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -11,11 +11,11 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-import com.testautomationuniversity.pages.GoogleSearchPage;
-import com.testautomationuniversity.pages.TauLandingPage;
-import com.testautomationuniversity.setup.BaseClass;
+import com.testautomationuniversity.web.pages.GoogleSearchPage;
+import com.testautomationuniversity.web.pages.TauLandingPage;
+import com.testautomationuniversity.web.setup.BaseClass;
 
-@Listeners(com.testautomationuniversity.utilities.TestListener.class)
+@Listeners(com.testautomationuniversity.web.utilities.TestListener.class)
 public class CanNavigateToWebsite extends BaseClass{
 	
 	public CanNavigateToWebsite(){
@@ -77,7 +77,7 @@ public class CanNavigateToWebsite extends BaseClass{
 			extent.createTest("1.2","Page Title Check").log(Status.FAIL, msg).fail(MediaEntityBuilder.createScreenCaptureFromPath("img.jpg").build());
 			}
 		
-		extent.createTest("1.3","Verify Failure Step").fail(MediaEntityBuilder.createScreenCaptureFromPath("img.jpg").build());
+		//extent.createTest("1.3","Verify Failure Step").fail(MediaEntityBuilder.createScreenCaptureFromPath("img.jpg").build());
 		//tauLandingPage.closePage();
 		}
 	
