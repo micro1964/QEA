@@ -37,6 +37,7 @@ public class CanNavigateToWebsite extends BaseClass{
 	
 	@Test
 	public void navigateToTAUWebsite() {
+		extentLogger =  report.createTest("Navigate To TAU Website");
 		GoogleSearchPage googleSearchPage= new GoogleSearchPage(driver);
 		
 		openSearchApplication();
@@ -46,12 +47,14 @@ public class CanNavigateToWebsite extends BaseClass{
 		if(googleSearchPage.getPageTitle().toLowerCase().contains("google")){
 			String msg = "The page title contains the expected text";
 			Assert.assertTrue(true,msg);
-			extent.createTest("1.1").log(Status.PASS, msg);
+			extentLogger.info("1.1").log(Status.PASS, msg);
+			//extent.createTest("1.1").log(Status.PASS, msg);
 			}
 		else {
 			String msg = "The page title does not contain the expected text";
 			Assert.assertTrue(false,msg);
-			extent.createTest("1.1").log(Status.FAIL, msg);
+			extentLogger.info("1.1").log(Status.FAIL, msg);
+			//extent.createTest("1.1").log(Status.FAIL, msg);
 			}
 		
 		String textSearchTerm = "Test Automation University";
@@ -69,12 +72,14 @@ public class CanNavigateToWebsite extends BaseClass{
 		if(tauLandingPage.getPageTitle().toLowerCase().contains(textSearchTerm.toLowerCase())) {
 			String msg = "The page title contains the expected text";
 			Assert.assertTrue(true,msg);
-			extent.createTest("1.2","Page Title Check").log(Status.PASS, msg);
+			//extent.createTest("1.2","Page Title Check").log(Status.PASS, msg);
+			extentLogger.info("1.2-Page Title Check").log(Status.PASS, msg);
 			}
 		else {
 			String msg = "The page title does not contain the expected text";
 			Assert.assertTrue(false,msg);
-			extent.createTest("1.2","Page Title Check").log(Status.FAIL, msg).fail(MediaEntityBuilder.createScreenCaptureFromPath("img.jpg").build());
+			//extent.createTest("1.2","Page Title Check").log(Status.FAIL, msg).fail(MediaEntityBuilder.createScreenCaptureFromPath("img.jpg").build());
+			extentLogger.info("1.2-Page Title Check").log(Status.FAIL, msg).fail(MediaEntityBuilder.createScreenCaptureFromPath("img.jpg").build());
 			}
 		
 		//extent.createTest("1.3","Verify Failure Step").fail(MediaEntityBuilder.createScreenCaptureFromPath("img.jpg").build());
