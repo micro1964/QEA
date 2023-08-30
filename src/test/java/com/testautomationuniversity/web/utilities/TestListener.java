@@ -5,6 +5,7 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 public class TestListener implements ITestListener {
+	//private static ExtentReports extent = 
 	
 	@Override
 	public void onTestStart(ITestResult result) {
