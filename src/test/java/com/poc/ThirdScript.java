@@ -46,7 +46,7 @@ public class ThirdScript {
 		int iData = js.getInt("data.size()");
 		for(int i=0; i<iData;i++) {
 			id.add(js.getInt("data["+i+"].id"));
-			employee_name.add(js.get("data["+i+"].employee_name"));
+			employee_name.add((String) js.get("data["+i+"].employee_name"));
 			employee_salary.add(js.getInt("data["+i+"].employee_salary"));
 			employee_age.add(js.getInt("data["+i+"].employee_age"));
 			}
